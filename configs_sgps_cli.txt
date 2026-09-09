@@ -1,0 +1,15 @@
+# SGPS / FFHQ 256x256. Run from this directory.
+# Set --T to 16 or 33.
+# Batch size is one. Alpha=0.5, Langevin steps=100, one Gaussian SURE probe.
+# Optional: --manifest PATH --measurement_source PATH to reuse audited measurements.
+# Optional: --image_ids 3-12 selects original source IDs, NOT local subset indices.
+# Output directories must be new/empty. Never reuse a completed output name.
+
+python main.py --task down_sampling --T 16 --data dataset/test-ffhq --checkpoint checkpoints/ffhq256.pt --output results/sr4_T16 --evaluate
+python main.py --task inpainting --T 16 --data dataset/test-ffhq --checkpoint checkpoints/ffhq256.pt --output results/box_T16 --evaluate
+python main.py --task inpainting_rand --T 16 --data dataset/test-ffhq --checkpoint checkpoints/ffhq256.pt --output results/random_T16 --evaluate
+python main.py --task gaussian_blur --T 16 --data dataset/test-ffhq --checkpoint checkpoints/ffhq256.pt --output results/gaussian_T16 --evaluate
+python main.py --task motion_blur --T 16 --data dataset/test-ffhq --checkpoint checkpoints/ffhq256.pt --output results/motion_T16 --evaluate
+python main.py --task phase_retrieval --T 16 --data dataset/test-ffhq --checkpoint checkpoints/ffhq256.pt --output results/phase_T16 --evaluate
+python main.py --task nonlinear_blur --T 16 --data dataset/test-ffhq --checkpoint checkpoints/ffhq256.pt --output results/nonlinear_T16 --evaluate
+python main.py --task hdr --T 16 --data dataset/test-ffhq --checkpoint checkpoints/ffhq256.pt --output results/hdr_T16 --evaluate

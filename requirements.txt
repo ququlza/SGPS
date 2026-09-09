@@ -1,0 +1,11 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+# FFHQ pixel-DDPM sampling and PSNR/LPIPS evaluation.
+torch==2.3.0
+torchvision==0.18.0
+numpy==1.24.4
+scipy==1.10.1
+pillow==10.3.0
+pyyaml==6.0
+tqdm==4.64.1
+lpips==0.1.4
