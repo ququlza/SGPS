@@ -1,6 +1,7 @@
 # SGPS: SURE Guided Posterior Sampling
 
 [![arXiv](https://img.shields.io/badge/arXiv-2512.23232-b31b1b.svg?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.23232)
+[![IEEE Access](https://img.shields.io/badge/IEEE%20Access-2026-00629B.svg)](https://ieeexplore.ieee.org/document/11685956)
 
 Code for **"SURE Guided Posterior Sampling: Trajectory Correction for
 Diffusion-Based Inverse Problems"** (IEEE Access).
